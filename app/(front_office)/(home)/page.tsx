@@ -2,6 +2,7 @@
 import "@/style/frontOfficeStyle/pages/home/_hero.scss";
 import Cta from "@/components/frontOffice/homeComponents/Cta"
 import Bouton from "@/components/frontOffice/homeComponents/Bouton"
+import Stats from "@/components/frontOffice/homeComponents/Stats"
 
 
 export default function HomePage(){
@@ -14,8 +15,8 @@ export default function HomePage(){
             {/* Le bouton permettant l'accès aux profils */}
             <Bouton/>
            
-        
-            <div className="stats">
+            <Stats/>
+            {/* <div className="stats">
                 <div className="main-container">
                     <div className="container">
                         <div className="stats-grid">
@@ -50,7 +51,7 @@ export default function HomePage(){
                     </div>
                 </div>
             </div>
-        
+        */}
         </section>
     )
-}
+} 
