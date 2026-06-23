@@ -1,3 +1,4 @@
+// Type des props attendues par une carte développeur
 type DevCardProps = {
   id: string | number;
   photo: string;
@@ -7,6 +8,7 @@ type DevCardProps = {
   portfolio: string;
 };
 
+// Composant qui affiche UNE SEULE carte développeur (photo, nom, poste, description, lien portfolio)
 export default function DevCard({
   photo,
   lastname,
@@ -16,26 +18,28 @@ export default function DevCard({
 }: DevCardProps) {
   return (
     <div className="card">
+      {/* Image de profil avec overlay au survol */}
       <div className="img">
         <img src={photo} alt={lastname} />
         <div className="overlay"></div>
       </div>
 
+      {/* Informations textuelles du développeur */}
       <div className="body">
         <h2 className="name">{lastname}</h2>
         <h4 className="title">{job}</h4>
         <p>{desc}</p>
 
-        {/* ✅ Balise <a> correctement ouverte */}
+        {/* Lien vers le portfolio du développeur, ouvert dans un nouvel onglet */}
         <a
           href={portfolio}
           className="btn"
           target="_blank"
           rel="noopener noreferrer"
         >
-          voir le profile <i className="fa-solid fa-arrow-right-long"></i>
+          voir le profil <i className="fa-solid fa-arrow-right-long"></i>
         </a>
       </div>
-    </div> // ✅ fermeture du dernier div
+    </div>
   );
 }
